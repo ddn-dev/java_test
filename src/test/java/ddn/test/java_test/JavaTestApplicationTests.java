@@ -3,7 +3,6 @@ package ddn.test.java_test;
 import ddn.test.java_test.controller.impl.PriceController;
 import ddn.test.java_test.dto.PriceDTO;
 import ddn.test.java_test.mocks.TestResults;
-import ddn.test.java_test.repository.PriceRepository;
 import ddn.test.java_test.service.PriceService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +42,6 @@ class JavaTestApplicationTests {
   @Autowired PriceController priceController;
 
   @MockBean PriceService priceService;
-
-  @MockBean PriceRepository priceRepository;
 
   @Test
   void test1_shouldReturn200() throws Exception {
