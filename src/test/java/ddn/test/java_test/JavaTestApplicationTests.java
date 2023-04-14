@@ -1,8 +1,5 @@
 package ddn.test.java_test;
 
-import static org.hamcrest.Matchers.containsString;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 import ddn.test.java_test.controller.impl.PriceController;
 import ddn.test.java_test.dto.PriceDTO;
 import ddn.test.java_test.mocks.TestResults;
@@ -12,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -72,9 +68,9 @@ class JavaTestApplicationTests {
     verify(priceService).findAllByParams(anyMap());
 
     response
-            .andExpect(status().isOk())
-            .andExpect(content().string(TestResults.TEST2_RESULT))
-            .andDo(print());
+        .andExpect(status().isOk())
+        .andExpect(content().string(TestResults.TEST2_RESULT))
+        .andDo(print());
   }
 
   @Test
@@ -85,9 +81,9 @@ class JavaTestApplicationTests {
     verify(priceService).findAllByParams(anyMap());
 
     response
-            .andExpect(status().isOk())
-            .andExpect(content().string(TestResults.TEST3_RESULT))
-            .andDo(print());
+        .andExpect(status().isOk())
+        .andExpect(content().string(TestResults.TEST3_RESULT))
+        .andDo(print());
   }
 
   @Test
@@ -98,9 +94,9 @@ class JavaTestApplicationTests {
     verify(priceService).findAllByParams(anyMap());
 
     response
-            .andExpect(status().isOk())
-            .andExpect(content().string(TestResults.TEST4_RESULT))
-            .andDo(print());
+        .andExpect(status().isOk())
+        .andExpect(content().string(TestResults.TEST4_RESULT))
+        .andDo(print());
   }
 
   @Test
@@ -111,9 +107,9 @@ class JavaTestApplicationTests {
     verify(priceService).findAllByParams(anyMap());
 
     response
-            .andExpect(status().isOk())
-            .andExpect(content().string(TestResults.TEST5_RESULT))
-            .andDo(print());
+        .andExpect(status().isOk())
+        .andExpect(content().string(TestResults.TEST5_RESULT))
+        .andDo(print());
   }
 
   @Test
